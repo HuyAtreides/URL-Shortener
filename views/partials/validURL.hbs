@@ -1,0 +1,74 @@
+<div class="row justify-content-center">
+  <div class="col pt-4">
+    <p
+      class="h2 text-center"
+      style="font-weight: 600; color: #505050 !important; max-width: 850px"
+    >
+      Your Shortened URL
+    </p>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div
+    class="col-md-7 col-sm-11 px-md-5 py-4 px-sm-0"
+    style="box-shadow: 0 1px 4px #ccc; background-color: white"
+  >
+    <form
+      action="/shortener"
+      class="input-group mb-3 mt-4"
+      method="POST"
+      style="margin: auto; max-width: 400px"
+    >
+      <input
+        id="shortURL"
+        type="text"
+        class="form-control px-3 py-3"
+        name="url"
+        value="{{ shortURL }}"
+        style="border: solid; width: 70% !important"
+      />
+      <div
+        class="btn btn-primary d-flex align-items-center justify-content-center"
+        style="font-weight: 600; width: 30%"
+        id="copyURL"
+      >
+        Copy URL
+      </div>
+      <div
+        id="copied"
+        style="
+          position: absolute;
+          background-color: #333;
+          right: 0px;
+          top: 64px;
+          color: white;
+          padding: 7px;
+          border-radius: 4px;
+          display: none;
+          font: 15px 'source sans pro', arial;
+        "
+      >
+        URL Copied
+      </div>
+    </form>
+    <p
+      style="
+        font: 18px 'source sans pro', arial;
+        line-height: 1.5;
+        padding-left: 50px;
+        word-wrap: break-word;
+      "
+    >
+      Long URL:
+      <a href="{{ longURL }}" target="_blank" style="text-decoration: none">{{
+        longURL
+      }}</a>
+      <br />
+      <br />
+      Track <a href="/total-clicks/{{ id }}">the total clicks</a> from your
+      shortened url<br />
+      Create another
+      <a href="/">short url</a>
+    </p>
+  </div>
+</div>
