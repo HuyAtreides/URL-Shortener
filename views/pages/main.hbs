@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <p class="display-4 text-primary text-center" style="font-weight: 600">
+        URL Shortener
+      </p>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div
+      class="col-md-7 col-sm-11 px-md-5 py-4 px-sm-0"
+      style="box-shadow: 0 1px 4px #ccc; background-color: white"
+    >
+      <p
+        class="h2 text-center mt-2"
+        style="color: #505050 !important; font-weight: 600"
+      >
+        Paste the URL to be shortened
+      </p>
+      <form
+        action="/shortener"
+        class="input-group mb-3 mt-4"
+        method="POST"
+        style="max-width: 500px; margin: auto"
+      >
+        <input
+          type="text"
+          class="form-control px-3 py-3"
+          placeholder="Enter your link here"
+          name="url"
+          style="width: 65% !important"
+        />
+        <input
+          type="submit"
+          value="Shorten URL"
+          class="btn btn-primary"
+          style="font-weight: 600; width: 35%; padding: 0 !important"
+        />
+      </form>
+    </div>
+  </div>
+</div>

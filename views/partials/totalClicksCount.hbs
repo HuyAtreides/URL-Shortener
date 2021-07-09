@@ -1,0 +1,59 @@
+<div class="row justify-content-center">
+  <div class="col-md-7 pt-4">
+    <p
+      class="h2"
+      style="font-weight: 600; color: #505050 !important; max-width: 850px"
+    >
+      URL Click Counter
+    </p>
+    <p style="font: 18px 'source sans pro', arial">
+      Enter the URL to find out how many clicks it has received so far.
+    </p>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div
+    class="col-md-7 col-sm-11 px-md-5 py-4 px-sm-0"
+    style="box-shadow: 0 1px 4px #ccc; background-color: white"
+  >
+    <form
+      action="/check-total-clicks"
+      class="input-group mb-3 mt-4"
+      method="POST"
+      style="margin: auto; max-width: 600px"
+    >
+      <input
+        type="text"
+        class="form-control px-3 py-3"
+        name="shortenedURL"
+        placeholder="Enter here your shortened URL"
+        style="
+          border: solid;
+          width: 77% !important;
+          font: 18px 'source sans pro', Arial;
+        "
+      />
+      <button
+        class="btn btn-primary d-flex align-items-center justify-content-center"
+        style="font-weight: 600; width: 23%"
+        id="copyURL"
+        type="submit"
+      >
+        Tracks Clicks
+      </button>
+    </form>
+    <p
+      style="
+        font: 18px 'source sans pro', arial;
+        line-height: 1.5;
+        padding-left: 50px;
+        word-wrap: break-word;
+      "
+    >
+      Example: https://surlapp.herokuapp.com/abcd
+      <br />
+      Create another
+      <a href="/">short url</a>
+    </p>
+  </div>
+</div>
